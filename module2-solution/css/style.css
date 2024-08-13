@@ -59,7 +59,7 @@ h1 {
 /* Desktop View */
 @media (min-width: 992px) {
     .menu-item {
-        width: calc(33.33% - 10px); /* 3 items in a row with space between */
+        width: calc(33.3333% - 10px); /* 3 items in a row with equal width */
         margin-bottom: 0;
     }
 }
