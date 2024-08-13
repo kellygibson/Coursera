@@ -1,76 +1,82 @@
-/* General styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1 {
+header {
     text-align: center;
-    font-size: 2em;
     margin: 20px 0;
 }
 
-.container {
-    width: 90%;
+h1 {
+    font-size: 2rem;
+}
+
+/* Section Styles */
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
 }
 
-.section {
-    border: 1px solid black;
+.menu-item {
+    background-color: #808080;
+    border: 1px solid #000;
     padding: 20px;
-    box-sizing: border-box;
     position: relative;
-    color: white;
-    margin: 10px 0;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-.section-title {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #333;
+.menu-title {
+    background-color: #d18787; /* Color for Chicken */
+    border: 1px solid #000;
     color: white;
+    font-size: 1.25rem;
     padding: 5px 10px;
-    border: 1px solid black;
-    box-sizing: border-box;
-    font-size: 1.25em;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-/* Desktop view (992px and above) */
-@media (min-width: 992px) {
-    .row {
-        display: flex;
-        justify-content: space-between;
-    }
+/* Section Title Colors */
+.menu-item:nth-child(2) .menu-title {
+    background-color: #b74141; /* Color for Beef */
+}
 
-    .section {
-        width: 32%;
+.menu-item:nth-child(3) .menu-title {
+    background-color: #f3e19e; /* Color for Sushi */
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .menu-item {
+        width: 32%; /* 3 items in a row */
         margin-bottom: 0;
     }
 }
 
-/* Tablet view (768px to 991px) */
+/* Tablet View */
 @media (min-width: 768px) and (max-width: 991px) {
-    .row {
-        display: flex;
-        flex-wrap: wrap;
+    .menu-item {
+        width: 48%; /* 2 items in a row */
     }
 
-    .section {
-        width: 48%;
-        margin-bottom: 20px;
-    }
-
-    .section:last-child {
-        width: 100%;
+    .menu-item:nth-child(3) {
+        width: 100%; /* 1 item in a row */
     }
 }
 
-/* Mobile view (767px and below) */
+/* Mobile View */
 @media (max-width: 767px) {
-    .section {
-        width: 100%;
+    .menu-title {
+        font-size: 1rem;
     }
 }
